@@ -208,7 +208,8 @@
     }
 
     .srq-history p {
-      font-size: 1rem;
+      font-size: 1.2rem;
+      font-weight: 500;
     }
   }
 
@@ -282,6 +283,11 @@
     .srq-sales-text h2 {
       font-size: 1.8rem;
     }
+
+    .srq-sales-text p {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
   }
 
   /* =======================
@@ -338,7 +344,8 @@
     }
 
     .srq-recognition p {
-      font-size: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
     }
   }
 

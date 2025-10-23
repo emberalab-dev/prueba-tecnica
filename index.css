@@ -1,0 +1,587 @@
+ :root {
+    --srq-blue: #002a5c;
+    --srq-red: #e1251b;
+    --srq-gray: #f5f5f5;
+    --srq-white: #ffffff;
+    --srq-text: #333;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .srq-page {
+    font-family: "Open Sans", Arial, sans-serif;
+    color: var(--srq-text);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  .srq-page h1,
+  .srq-page h2,
+  .srq-page h3 {
+    margin-bottom: 0.5em;
+  }
+
+  .srq-title {
+    color: var(--srq-blue);
+  }
+
+  .srq-text-white {
+    color: var(--srq-white);
+  }
+
+  .srq-container {
+    max-width: 1100px;
+  }
+
+  .srq-section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .srq-two-column {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .srq-two-column img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .srq-col {
+    flex: 1 1 400px;
+  }
+
+  .srq-gray-bg {
+    background: var(--srq-gray);
+  }
+
+  .srq-cta {
+    background: var(--srq-blue);
+    color: var(--srq-white);
+    text-align: center;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .srq-page details {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px 15px;
+    background: var(--srq-white);
+  }
+
+  .srq-page summary {
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .srq-page summary:hover {
+    color: var(--srq-red);
+  }
+
+  /* =======================
+   HERO SECTION
+  ======================= */
+  .srq-hero {
+    position: relative;
+    height: 100vh;
+    background: url("https://plus.unsplash.com/premium_photo-1664298112642-ebc3d742dc4b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--srq-white);
+    overflow: hidden;
+  }
+
+  .srq-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+  }
+
+  .srq-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 1rem;
+    animation: fadeInUp 1.2s ease forwards;
+    opacity: 0;
+  }
+
+  .srq-hero-content p {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    opacity: 0.85;
+  }
+
+  .srq-hero-content h1 {
+    color: var(--srq-white);
+    font-size: clamp(2.5rem, 7vw, 6rem);
+    font-weight: 800;
+    line-height: 1.1;
+  }
+
+  /* =======================
+   OUR STORY
+  ======================= */
+  .srq-history {
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--srq-white);
+    padding: 160px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .srq-history-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.65), rgba(20, 20, 20, 0.4));
+    z-index: 1;
+  }
+
+  .srq-history-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    animation: fadeUp 1.2s ease forwards;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .srq-history h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--srq-white);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
+
+  .srq-history p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--srq-white);
+    margin-bottom: 1.2rem;
+  }
+
+  @media (max-width: 768px) {
+    .srq-history {
+      padding: 100px 15px;
+      background-attachment: scroll;
+    }
+
+    .srq-history h2 {
+      font-size: 2rem;
+    }
+
+    .srq-history p {
+      font-size: 1rem;
+    }
+  }
+
+  /* =======================
+   TRUSTED SALES TEAM
+  ======================= */
+  .srq-sales-overlay {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 650px;
+    overflow: hidden;
+    background: #111;
+  }
+
+  .srq-sales-bg img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+    transition: transform 1.2s ease;
+  }
+
+  .srq-sales-overlay:hover .srq-sales-bg img {
+    transform: scale(1.05);
+  }
+
+  .srq-sales-text {
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(6px);
+    padding: 3rem 3.5rem;
+    border-radius: 12px;
+    max-width: 800px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    animation: fadeUp 1s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .srq-sales-text h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--srq-white);
+    margin-bottom: 1rem;
+  }
+
+  .srq-sales-text p {
+    color: var(--srq-white);
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 900px) {
+    .srq-sales-overlay {
+      min-height: 550px;
+      padding: 2rem 1rem;
+    }
+
+    .srq-sales-text {
+      padding: 2rem 1.5rem;
+      background: rgba(255, 255, 255, 0.95);
+      text-align: center;
+    }
+
+    .srq-sales-text h2 {
+      font-size: 1.8rem;
+    }
+  }
+
+  /* =======================
+   SRQ Auto LLC Recognition
+  ======================= */
+  .srq-recognition {
+    position: relative;
+    background-image: url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=1170");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--srq-white);
+    text-align: center;
+    padding: 8rem 2rem;
+    overflow: hidden;
+  }
+
+  .srq-recognition .srq-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+  }
+
+  .srq-recognition .srq-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeUp 1.2s ease forwards;
+  }
+
+  .srq-recognition h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .srq-recognition p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #eaeaea;
+  }
+
+  @media (max-width: 768px) {
+    .srq-recognition {
+      padding: 5rem 1.5rem;
+      background-attachment: scroll;
+    }
+
+    .srq-recognition h2 {
+      font-size: 2rem;
+    }
+
+    .srq-recognition p {
+      font-size: 1rem;
+    }
+  }
+
+  /* =======================
+   VALUE HIGHLIGHTS
+  ======================= */
+  .srq-value-highlights {
+    background: linear-gradient(135deg, #f7f8fa 0%, #ffffff 100%);
+    padding: 80px 20px;
+    text-align: center;
+  }
+
+  .srq-section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #222;
+    font-weight: 700;
+  }
+
+  .srq-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+  }
+
+  .srq-benefit-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+
+  .srq-benefit-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  }
+
+  .srq-benefit-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+  }
+
+  .srq-benefit-card:hover img {
+    filter: grayscale(0);
+  }
+
+  .srq-benefit-card h3 {
+    font-size: 1.2rem;
+    color: var(--srq-red);
+    margin-bottom: 10px;
+  }
+
+  .srq-benefit-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* =======================
+   WHY LIST SECTION
+  ======================= */
+  .srq-why {
+    background: #f7f8fa;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .srq-why-header h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+
+  .srq-why-header h2 span {
+    color: var(--srq-red, var(--srq-red));
+  }
+
+  .srq-why-header p {
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+  }
+
+  .srq-why-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .srq-why-item {
+    background: var(--srq-white);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .srq-why-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .srq-why-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .srq-why-item h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #111;
+  }
+
+  .srq-why-item p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* =======================
+   FAQ
+  ======================= */
+  .srq-faqs-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .srq-faqs-parent h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .srq-faqs-parent h2 span:first-child {
+    color: #111;
+  }
+
+  .srq-faqs-parent h2 span:last-child {
+    color: var(--srq-red);
+  }
+
+  .srq-faqs-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  details {
+    background: var(--srq-white);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  details:hover {
+    background: var(--srq-white);
+  }
+
+  summary {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    list-style: none;
+  }
+
+  summary::marker {
+    display: none;
+  }
+
+  summary::after {
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #666;
+    transition: transform 0.2s ease;
+  }
+
+  details[open] summary::after {
+    content: "×";
+    transform: rotate(180deg);
+    color: #111;
+  }
+
+  .srq-details-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.3s ease;
+    padding: 0 1.5rem;
+  }
+
+  details[open] .srq-details-content {
+    max-height: 300px;
+    opacity: 1;
+    padding-top: 0.8rem;
+    padding-bottom: 1rem;
+  }
+
+  .srq-details-content p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* =========================================
+   ANIMATIONS
+  ========================================= */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

@@ -293,7 +293,7 @@
     }
 
     .srq-sales-text p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 600;
     }
   }
@@ -516,6 +516,7 @@
 
   .srq-service-experts p {
     font-size: clamp(0.9rem, 7vw, 1.2rem);
+    text-align: center;
   }
 
   /* =======================

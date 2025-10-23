@@ -1,4 +1,4 @@
-:root {
+  :root {
     --srq-blue: #002a5c;
     --srq-red: #e1251b;
     --srq-gray: #f5f5f5;
@@ -135,6 +135,17 @@
     line-height: 1.1;
   }
 
+  @media (max-width: 768px) {
+    .srq-hero-content p {
+      font-size: 1.5rem;
+    }
+
+    .srq-hero-content h1 {
+      font-size: clamp(4rem, 7vw, 6rem);
+    }
+  }
+
+
   /* =======================
    OUR STORY
   ======================= */
@@ -163,7 +174,7 @@
   .srq-history-content {
     position: relative;
     z-index: 2;
-    max-width: 850px;
+    max-width: 620px;
     animation: fadeUp 1.2s ease forwards;
     opacity: 0;
     transform: translateY(40px);
@@ -180,7 +191,7 @@
   }
 
   .srq-history p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.7;
     color: var(--srq-white);
     margin-bottom: 1.2rem;
@@ -194,6 +205,10 @@
 
     .srq-history h2 {
       font-size: 2rem;
+    }
+
+    .srq-history p {
+      font-size: 1rem;
     }
   }
 
@@ -351,6 +366,7 @@
     margin: 0 auto;
     list-style: none;
     padding: 0;
+    margin-top: 40px;
   }
 
   .srq-benefit-card {

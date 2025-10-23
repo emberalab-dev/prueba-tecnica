@@ -178,6 +178,12 @@
     animation: fadeUp 1.2s ease forwards;
     opacity: 0;
     transform: translateY(40px);
+    backdrop-filter: blur(6px);
+    padding: 3rem 3.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(30px);
   }
 
   .srq-history h2 {
@@ -191,7 +197,7 @@
   }
 
   .srq-history p {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 7vw, 1.2rem);
     line-height: 1.7;
     color: var(--srq-white);
     margin-bottom: 1.2rem;
@@ -248,7 +254,7 @@
     border-radius: 12px;
     max-width: 800px;
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
-    text-align: left;
+    text-align: center;
     animation: fadeUp 1s ease forwards;
     opacity: 0;
     transform: translateY(30px);
@@ -286,7 +292,7 @@
 
     .srq-sales-text p {
       font-size: 1.2rem;
-      font-weight: 500;
+      font-weight: 600;
     }
   }
 
@@ -318,6 +324,12 @@
     max-width: 800px;
     margin: 0 auto;
     animation: fadeUp 1.2s ease forwards;
+    backdrop-filter: blur(6px);
+    padding: 3rem 3.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateY(30px);
   }
 
   .srq-recognition h2 {
@@ -346,6 +358,7 @@
     .srq-recognition p {
       font-size: 1.2rem;
       font-weight: 600;
+      font-weight: 600;
     }
   }
 
@@ -361,13 +374,17 @@
   .srq-section-title {
     font-size: 2rem;
     margin-bottom: 40px;
-    color: #222;
+    color: var(--srq-blue);
     font-weight: 700;
+  }
+
+  .srq-section-title span {
+    color: var(--srq-red, var(--srq-red));
   }
 
   .srq-benefits {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 30px;
     max-width: 1100px;
     margin: 0 auto;
@@ -404,7 +421,7 @@
 
   .srq-benefit-card h3 {
     font-size: 1.2rem;
-    color: var(--srq-red);
+    color: #111;
     margin-bottom: 10px;
   }
 
@@ -438,6 +455,7 @@
     max-width: 600px;
     margin: 0 auto 3rem;
     line-height: 1.6;
+    font-size: clamp(0.9rem, 5vw, 1.1rem);
   }
 
   .srq-why-list {
@@ -484,12 +502,18 @@
   /* =======================
    SERVICE EXPERTS
   ======================= */
-  @media (max-width: 810px) {
-    .srq-service-experts {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+  .srq-service-experts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .srq-service-experts h2 {
+    text-align: center;
+  }
+
+  .srq-service-experts p {
+    font-size: clamp(0.9rem, 7vw, 1.2rem);
   }
 
   /* =======================

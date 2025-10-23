@@ -180,7 +180,7 @@
   }
 
   .srq-history p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.7;
     color: var(--srq-white);
     margin-bottom: 1.2rem;
@@ -194,10 +194,6 @@
 
     .srq-history h2 {
       font-size: 2rem;
-    }
-
-    .srq-history p {
-      font-size: 1rem;
     }
   }
 
